@@ -1,0 +1,9 @@
+# Trading Venues
+
+The software systems underlying trading venues (henceforth referred to informally as exchanges) differ from most application domains in a surprising way: their simplicity. Software of even moderate complexity often involves concurrency, side effects, external dependencies, compatibility requirements spanning two or more operating systems, and some form of a visual user interface. Core trading matching systems, by contrast are serial (within system boundaries), pure (when implemented as such), free of external blocking dependencies, server-side, bound to a single environment, and sans UI. They are message oriented systems that map a well defined set of inputs to outputs.
+
+That's not to say that exchanges are *easier* to build than other software systems - they come with their own share of unique challenges. Notably, their economic significance qualifies them as a [safety-critical system](https://en.wikipedia.org/wiki/Safety-critical_system) and their demanding performance requirements puts them in the domain of [real-time computing](https://en.wikipedia.org/wiki/Real-time_computing). Both are extreme technical challenges.
+
+That said, given the right legwork up front, exchange architectures are shockingly easy to build, maintain, and evolve. This document details the engineering practices of OneChronos, which are themselves designed to produce highly performant, highly correct software at a rapid pace. Our Systems Engineering guide details the architectural patterns and primitives upon which complex, business-centric applications can emerge and evolve. Taken in conjunction, they're a guide to building software at OneChronos.
+
+The software that we produce today is for matching trades, but these patterns and practices are universal when it comes to authoring software for safety-critical event driven systems. All future ambitions involve software and hardware in this space, and our development process reflects that.

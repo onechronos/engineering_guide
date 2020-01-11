@@ -1,0 +1,13 @@
+# Testing Business Logic
+
+True unit tests are not the right approach to testing business logic. The reason why is simple: *real* unit tests map one-for-one to specific functions/classes/modules in software. As we saw in our [section on DDD + ML languages](#ddd-ml) sometimes (and ideally) data structures and functions map one-to-one to business logic, but this is not always the case.
+
+Software projects often use unit tests to exercise business logic that involves more than one software "unit." This is an anti-pattern that's often indicative of broader code quality issues. On the pure software side, unit tests that exercise aggregates (in the DDD meaning of that word) instead of individual units often hint at the existence of something simpler and more modular.
+
+On the business side, business logic should (ideally) be a pure data driven mapping of inputs to outputs. It's formalized in code, but exists independent of any particular programming language or construct. Notably, business logic exists independent of software constructs like argument construction and function calls. Unit tests fail to appreciate this; they mix programming language specific nuance with the business logic itself. That makes it difficult to collaborate on test cases directly with the business side and couples test cases to specific language/framework/implementation details.
+
+As such, OneChronos favors specific flavors of [black-box testing](https://en.wikipedia.org/wiki/Black-box_testing) for exercising business logic. Agile refers to some of what we do as [behavior-driven development (BDD)](https://en.wikipedia.org/wiki/Behavior-driven_development). While we don't believe in dogmatic [test-driven development](https://en.wikipedia.org/wiki/Test-driven_development), we do believe in and use frameworks and paradigms that look like stories/spec tests.
+
+The best means for effective black-box testing are highly situation dependent. FIX gateways, some APIs, and portions of the match logic lend themselves well to testing via [golden files](https://medium.com/@jarifibrahim/golden-files-why-you-should-use-them-47087ec994bf). In other situations, spec tests of the [rspec](https://rspec.info/) and [cucumber](https://cucumber.io/tools/cucumber-open/) variety are the way to go.
+
+Regardless of the flavor of black-box testing used, tests should use language agnostic frameworks that leverage universal input/output formats over universal communication protocols e.g. json passed via stdin/stdout to invoke business logic and verify results. When done so diligently, systems are free to evolve with higher velocity and reduced risk.

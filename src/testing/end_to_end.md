@@ -1,0 +1,9 @@
+# End-to-End
+
+An ancillary benefit of the black-box approach is test composability. For example, a test that exists to verify the correct behavior of a FIX engine can often find use as an end-to-end test when composed with tests that verify the behavior of the market data facility, matching engine, and trade reporting systems. Doing so results in a higher velocity development process and less fragile test code.
+
+As such, there's not a strong distinction between functional, integration, system, and acceptance testing at OneChronos. Tests tend to follow a uniform style and receive a *fuzzy, temporal* classification based on how and when they're invoked. For example, a test might run on a small component in isolation and be a functional test. If the same test found use as a stage in an end-to-end testing pipeline running in production, we'd refer to it as an acceptance test. That's not to say that some tests aren't purely functional or end-to-end.
+
+Tools and paradigms like cheap cloud compute, Docker, Terraform, and Ansible, and the [Robot Framework](https://robotframework.org/) make these testing modalities possible. Historically the extreme difficulty of creating realistic replicas of a company's production software environment and the cost of manual testing made the use of end-to-end testing impractical for most, and something that (true to the name) occurred at the end of the SDP. That's no longer the case.
+
+[Robotic Process Automation](https://en.wikipedia.org/wiki/Robotic_process_automation) and the notion of infrastructure and system configuration as code now makes the use of end-to-end practical throughout the development lifecycle. Doing so catches problems early and empowers developers to iterate aggressively. That helps ensure that systems at OneChronos never become "legacy."
