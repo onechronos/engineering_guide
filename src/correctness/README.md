@@ -1,3 +1,0 @@
-# System Correctness and Reliability
-
-In a truly broad sense, everything that goes wrong with software systems in a business impactful way stems from one of three root causes that OneChronos refers to as Type I, II, and III faults. Systems can and should be able to handle faults without failing in a way that impacts the business. When failures happen, one or more faults (most commonly, a chain of them) are to blame. DDD is an effective tool for directly reducing the frequency of faults, but more importantly, the frequency of failures. Put another way, what the business cares about is $P(failure)$; DDD reduces both $P(fault)$ and $P(failure|fault)$, which can in turn greatly reduces $P(failure)$. We start with a discussion of fault types.

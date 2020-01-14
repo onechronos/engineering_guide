@@ -4,3 +4,10 @@ language = "en"
 multilingual = false
 src = "src"
 title = "OneChronos Engineering"
+
+[output.html]
+mathjax-support = true
+
+[output.linkcheck]
+follow-web-links = true
+traverse-parent-directories = true

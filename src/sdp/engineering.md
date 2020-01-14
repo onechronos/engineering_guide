@@ -18,7 +18,7 @@ __The following are the hard and fast firm-wide rules for software engineering a
 * Use "low cost" static analysis tools when available.
 * Automate everything involving build / test / deployment process.
 * Don't bikeshed. That applies 10x when it comes to syntax and matters of personal taste. The OneChronos style guides might not make sense in every situation but the benefits of uniform use are twofold:
-  * Code that appears uniform company wide is easier to read $\Rightarrow$ reduced cognitive load $\Rightarrow P(\text{mistake})$ 
+  * Code that appears uniform company wide is easier to read \\( \Rightarrow \\) reduced cognitive load \\( \Rightarrow P(\text{mistake}) \\)
   * Bikeshedding over style is a huge time waster
 * Code must be in strict accordance with the following language specific style guides and tools:
   * OCaml

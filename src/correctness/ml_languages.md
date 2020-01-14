@@ -52,7 +52,15 @@ type order = {
 };
 ```
 
-and explain that there's a fifth rule: ```option``` means that something might or might not be present. At this point, the developer still hasn't written any business logic. The business surfaced the issue with the domain model before time went towards writing "doomed to fail" code.
+and explain that there's a fifth rule: ```option``` means that something might or might not be present:
+
+```reasonml
+type option('a) =
+  | None
+  | Some('a);
+```
+
+where ```'a``` is a placeholder for an arbitrary type such as an ```int```. At this point, the developer still hasn't written any business logic. The business surfaced the issue with the domain model before time went towards writing "doomed to fail" code.
 
 Now that the business side and the developer have agreed on the shape of the data itself, it's time to agree on the verbs. Before writing the actual logic, the developer could sketch out function definitions for feedback:
 
@@ -102,7 +110,13 @@ let isSecurityShortRestricted = order =>
   };
 ```
 
-A quick explanation of pattern matching semantics can make ```switch``` statements almost as readable as types. Short of that the developer could walk a stakeholder through every match arm, explain the conditions that lead to it, and verify and ask "is the function returning the right value in this case?"
+A quick explanation of pattern matching semantics can make ```switch``` statements almost as readable as types:
+
+* ```switch (...)``` means: take one of the following options
+* ```| ...``` means: here's a possible option
+* ```_``` means: match everything
+
+Even without these explanations the developer can walk a stakeholder through every match arm, explain the conditions that lead to it, and verify that the business logic is correct by asking "is the function returning the right value in this case?"
 
 Both the process and result are superior to V1 of ```is_short_sell_eligible```. In contrast to the process that led to the business discovering issues with the validator after the developer spent time writing it, our functional/ML DDD process surfaced it *before*. That was immaterial in this trivial example, but early detection of modeling errors can often save weeks or months. Furthermore, every noun and verb came straight from the Ubiquitous Language - there's nothing that would appear foreign to either a technical or non-technical stakeholder.
 

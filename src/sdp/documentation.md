@@ -4,7 +4,7 @@ In general, you should document systems, not code. Line level code comments for 
 
 In general, comment code if one of the following is true:
 
-* You're documenting an algorithm or something that's unreadable for a good reason, e.g. "The following is a trick for computing $x \text{ mod } n$ without division. It works because $n = 2^k, k \in \mathbb{Z}$. See [Compute modulus division by 1 << s without a division operator](https://graphics.stanford.edu/~seander/bithacks.html#ModulusDivisionEasy)."
+* You're documenting an algorithm or something that's unreadable for a good reason, e.g. "The following is a trick for computing \\( x \text{ mod } n \\) without division. It works because  \\( n = 2^k, k \in \mathbb{Z} \\). See [Compute modulus division by 1 << s without a division operator](https://graphics.stanford.edu/~seander/bithacks.html#ModulusDivisionEasy)."
 * You're documenting a __stable__ API that will __definitely__ find use outside of the project that it lives in. Note the emphasis on "stable" and "definitely."
 * You're documenting design decisions. These notes are often invaluable for understanding code and preventing future teams (or yourself) from wasting time on pursuing dead ends when revisiting code down the road.
 

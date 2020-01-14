@@ -20,7 +20,7 @@ Each of those items brings with it ambiguity:
 
 ... etc etc.
 
-To approaches to resolving this ambiguity exist:
+Two approaches to resolving this ambiguity exist:
 
 * Use conjugation to make every word in the Ubiquitous Language unique and unambiguous. Instead of ```Portal```, say ```ClientPortal```. Instead of User, say ```NonBrokerClientPortalUser```.
 * Establish [Bounded Contexts](https://martinfowler.com/bliki/BoundedContext.html) that break up the larger system into smaller ones, each with their own Ubiquitous Language. In this approach, a Client Portal Context might have a ```Subscriber``` and a ```User```. Their meaning is ambiguous when the context is unknown, but unambiguous within a context.

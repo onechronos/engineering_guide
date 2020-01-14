@@ -1,6 +1,6 @@
 # Software Engineering ≠ Research
 
-Much of what we do at OneChronos is scientific research - not engineering. The distinction is that engineering is the practice of turning specifications into product under a well defined process. Research is an exercise in turning ideas that might or might be possible into engineering tools. Much of what's written on the software development process - planning and estimation in particular - does not apply to research.
+Much of what we do at OneChronos is scientific research - not engineering. The distinction is that engineering is the practice of turning specifications into product under a well defined process. Research is an exercise in turning ideas that might or might not be possible into engineering tools. Much of what's written on the software development process - planning and estimation in particular - does not apply to research.
 
 Because research inherently focuses on the unknown, estimating the absolute time/cost difficulty of getting to a result doesn't make sense. What does make sense is a relative statement of opportunity cost. By researching __A__, you will not have the time or money to research __B__. A commitment to __C__ for two months will delay an engineering project __D__ by two months; given that the expected value of __D__ is __X__, is __C__ worth it?
 

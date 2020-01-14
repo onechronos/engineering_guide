@@ -2,7 +2,7 @@
 
 Before discussing techniques for effective collaboration it's worth unpacking what we mean by stakeholder. Every company has internal and external stakeholders. Internal stakeholders include engineers, business development professionals, product owners, and the company itself. External stakeholders include customers, regulators, and vendors. Investors/non-employee shareholders lay somewhere in the middle.
 
-Almost every initiative involves two or more stakeholders. Whenever that's the case, effective collaboration and a shared interest in the outcome is key to success. At times that collaboration is entirely commercial. Sometimes it's entirely technical. [DDD](../ddd/index.html) applies to both situations and everything in-between. Unlike most of the SDP religions, DDD is à la carte and has no methodological or technological underpinnings. Its core philosophy is simple:
+Almost every initiative involves two or more stakeholders. Whenever that's the case, effective collaboration and a shared interest in the outcome is key to success. At times that collaboration is entirely commercial. Sometimes it's entirely technical. [DDD](../ddd/index.md) applies to both situations and everything in-between. Unlike most of the SDP religions, DDD is à la carte and has no methodological or technological underpinnings. Its core philosophy is simple:
 
 * Effective communication requires that stakeholders establish a Ubiquitous Language to describe the problem domain
 * Formal descriptions of process models should underpin design decisions

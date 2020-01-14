@@ -27,7 +27,7 @@ def test_list_length_unchanged(test_list):
     assert len(test_list) == len(my_sort(test_list)))
 ```
 
-stands a much better chance of catching said bugs on day one, and would prove less fragile in the face of future changes. NB: property testing and fuzzing $\neq$ formal methods. They're random test case generation with (best case) some light static analysis to exercise interesting code paths. The effectiveness of property tests hinges on writing good "strategies" for generating test cases. Good property testing frameworks make this as easy as possible and far more declarative than cranking out unit tests, but they still require care to exercise corner cases.
+stands a much better chance of catching said bugs on day one, and would prove less fragile in the face of future changes. NB: property testing and fuzzing \\( \neq \\) formal methods. They're random test case generation with (best case) some light static analysis to exercise interesting code paths. The effectiveness of property tests hinges on writing good "strategies" for generating test cases. Good property testing frameworks make this as easy as possible and far more declarative than cranking out unit tests, but they still require care to exercise corner cases.
 
 As an experienced developer it's easy to think that you'd never miss trivial corner cases or make silly mistakes. The reality is, software is subtle and hard, and everyone misses corner cases. Fun fact: a bug in Java's implementation of binary search (written by the veritable Josh Bloch himself) went undetected for [over twenty years](https://en.wikipedia.org/wiki/Binary_search_algorithm#Implementation_issues).
 
@@ -67,7 +67,7 @@ When unit tests find use, make sure to use them in conjunction with code coverag
 ### Python
 
 * __Unit testing framework__: built-in
-* __Code coverage__: [coverage.py](https://coverage.readthedocs.io/en/coverage-5.0.2/)
+* __Code coverage__: [coverage.py](https://coverage.readthedocs.io/en/stable/)
 
 ### Java
 
